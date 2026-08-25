@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="MUNDA logo">
+  <!-- Original mark: hex outline + M monogram + red accent -->
+  <path d="M24 3.5 42.5 13.75v20.5L24 44.5 5.5 34.25v-20.5L24 3.5Z" stroke="#e4002b" stroke-width="2.6"/>
+  <path d="M24 3.5 42.5 13.75v20.5L24 44.5 5.5 34.25v-20.5L24 3.5Z" stroke="rgba(255,255,255,0.06)" stroke-width="6"/>
+  <path d="M14.5 32.5V15.5L24 26l9.5-10.5v17" stroke="#f4f4f5" stroke-width="3.4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="37.5" cy="10.5" r="2.2" fill="#e4002b"/>
+</svg>

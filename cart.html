@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — MUNDA Ambient Lighting</title>
+  <meta name="description" content="Review your cart and check out securely. Factory-direct, insured shipping, free express over €150.">
+  <meta name="theme-color" content="#060607">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <div class="utility">
+    <div class="container utility__inner">
+      <div class="u-left">
+        <span>Factory-direct pricing</span>
+        <span class="dot">·</span>
+        <span><strong>64-color</strong> ambient kits</span>
+        <span class="dot">·</span>
+        <span>2-year warranty</span>
+      </div>
+      <div class="u-right">
+        <span>Mon–Sat 8:00–18:00 · <strong>+49 30 555 01 90</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="MUNDA home">
+        <img class="brand__mark" src="assets/img/logo.svg" alt="" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">MUND<span>A</span></span>
+          <span class="brand__sub">Audi Interior Lighting</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav__link" href="shop.html">Shop All</a>
+        <a class="nav__link" href="shop.html?cat=kits" data-cat="kits">Kits</a>
+        <a class="nav__link" href="shop.html?cat=interior" data-cat="interior">Interior</a>
+        <a class="nav__link" href="shop.html?cat=exterior" data-cat="exterior">Exterior</a>
+        <a class="nav__link" href="shop.html?cat=controllers" data-cat="controllers">Control</a>
+        <a class="nav__link" href="index.html#factory">Factory</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" data-search-open aria-label="Open search (press /)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a class="icon-btn" href="cart.html" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.5 13.5a1 1 0 0 1-1 1.1H5.5a1 1 0 0 1-1-1.1L6 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a class="mobile-menu__link" href="shop.html">Shop all <small>catalogue</small></a>
+    <a class="mobile-menu__link" href="shop.html?cat=kits">Light kits <small>kits</small></a>
+    <a class="mobile-menu__link" href="shop.html?cat=interior">Interior light <small>interior</small></a>
+    <a class="mobile-menu__link" href="shop.html?cat=exterior">Logo &amp; exterior <small>exterior</small></a>
+    <a class="mobile-menu__link" href="shop.html?cat=controllers">Controllers <small>control</small></a>
+    <a class="mobile-menu__link" href="index.html#factory">Factory <small>factory</small></a>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEAD ================= -->
+    <section class="pagehead">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">/</span><span class="here">Cart</span>
+        </nav>
+        <h1>Your cart</h1>
+        <p>Factory-direct. Bench-tested. Insured shipping. 30-day returns.</p>
+      </div>
+    </section>
+
+    <section class="section" id="cartSection">
+      <div class="container">
+        <div class="cartpage">
+          <div class="cart-table" id="cartTable"></div>
+          <aside class="order-summary" id="orderSummary" aria-label="Order summary">
+            <h3>Order summary</h3>
+            <div class="sum-row"><span>Subtotal</span><span id="sumSubtotal">€0</span></div>
+            <div class="sum-row"><span>Shipping</span><span id="sumShipping">—</span></div>
+            <div class="sum-row" id="sumDiscountRow" hidden><span>Promo (MUNDA10)</span><span class="free" id="sumDiscount">−€0</span></div>
+            <div class="promo">
+              <input class="input" id="promoInput" placeholder="Promo code" aria-label="Promo code">
+              <button class="btn btn--ghost btn--sm" id="promoApply">Apply</button>
+            </div>
+            <p class="promo-msg" id="promoMsg"></p>
+            <div class="sum-row grand"><span>Total incl. VAT</span><span id="sumTotal">€0</span></div>
+            <button class="btn btn--red btn--block" id="checkoutBtn" style="margin-top:18px">Proceed to checkout</button>
+            <p class="pay-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Demo checkout — no real payment is processed.
+            </p>
+          </aside>
+        </div>
+
+        <!-- ================= CHECKOUT ================= -->
+        <div class="checkout-panel" id="checkoutPanel" hidden style="margin-top:48px">
+          <div class="steps" aria-label="Checkout progress">
+            <span class="step done"><span class="n">✓</span> Cart</span>
+            <span class="step-line"></span>
+            <span class="step on"><span class="n">2</span> Payment</span>
+            <span class="step-line"></span>
+            <span class="step"><span class="n">3</span> Confirmation</span>
+          </div>
+          <form class="pay-form" id="payForm" novalidate>
+            <div class="field full">
+              <label for="payName">Full name</label>
+              <input class="input" id="payName" autocomplete="name" placeholder="Max Mustermann" required>
+            </div>
+            <div class="field full">
+              <label for="payEmail">Email</label>
+              <input class="input" id="payEmail" type="email" autocomplete="email" placeholder="max@example.com" required>
+            </div>
+            <div class="field full">
+              <label for="payCard">Card number</label>
+              <input class="input" id="payCard" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19" required>
+            </div>
+            <div class="field">
+              <label for="payExp">Expiry</label>
+              <input class="input" id="payExp" placeholder="MM/YY" maxlength="5" inputmode="numeric" required>
+            </div>
+            <div class="field">
+              <label for="payCvc">CVC</label>
+              <input class="input" id="payCvc" placeholder="123" maxlength="4" inputmode="numeric" required>
+            </div>
+            <div class="full">
+              <button class="btn btn--red btn--block" id="payBtn" type="submit">Pay <span id="payAmount">€0</span></button>
+            </div>
+            <p class="pay-note full">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              This is a demonstration storefront. Your card details are never sent anywhere — enter any values to see the confirmation flow.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <img class="brand__mark" src="assets/img/logo.svg" alt="" width="42" height="42">
+            <span class="brand__text">
+              <span class="brand__name">MUND<span>A</span></span>
+              <span class="brand__sub">Audi Interior Lighting</span>
+            </span>
+          </a>
+          <p>Factory-direct ambient lighting for the full Audi range — designed, manufactured and bench-tested in-house, fitment-checked for your model.</p>
+          <div class="footer__pay">
+            <span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>KLARNA</span><span>APPLE PAY</span>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h5>Shop</h5>
+          <ul>
+            <li><a href="shop.html">All lighting</a></li>
+            <li><a href="shop.html?cat=kits">Ambient light kits</a></li>
+            <li><a href="shop.html?cat=interior">Interior lighting</a></li>
+            <li><a href="shop.html?cat=exterior">Logo &amp; exterior light</a></li>
+            <li><a href="shop.html?cat=controllers">Controllers &amp; modules</a></li>
+            <li><a href="shop.html?cat=custom">Factory &amp; OEM services</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Models</h5>
+          <ul>
+            <li><a href="shop.html?compat=A3">A3 / S3 / RS3</a></li>
+            <li><a href="shop.html?compat=A4">A4 / S4 / RS4</a></li>
+            <li><a href="shop.html?compat=A5">A5 / S5 / RS5</a></li>
+            <li><a href="shop.html?compat=A6">A6 / S6 / RS6</a></li>
+            <li><a href="shop.html?compat=Q5">Q5 / SQ5</a></li>
+            <li><a href="shop.html?compat=TT">TT / TTS / TTRS</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="index.html#fitment">Check fitment</a></li>
+            <li><a href="#">Installation guides</a></li>
+            <li><a href="#">Returns &amp; warranty</a></li>
+            <li><a href="#">App &amp; firmware</a></li>
+            <li><a href="#">B2B / trade program</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Contact</h5>
+          <ul>
+            <li>MUNDA Lighting GmbH</li>
+            <li>Leuchtenstraße 12, 10115 Berlin</li>
+            <li><a href="tel:+49305550190">+49 30 555 01 90</a></li>
+            <li><a href="mailto:lighting@munda.example">lighting@munda.example</a></li>
+            <li>Mon–Sat · 8:00–18:00 CET</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span class="js-year">2026</span> MUNDA Lighting GmbH. All rights reserved.</span>
+        <span>Demo storefront — product photography shown as placeholder. <a href="#">Privacy</a> · <a href="#">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div class="drawer__backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer__panel" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Your cart <span id="drawerCount">(0)</span></h3>
+      <button class="drawer__close" data-close-drawer aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer__items" id="drawerItems"></div>
+    <div class="drawer__foot">
+      <div class="ship-bar">
+        <p class="ship-bar__msg" id="shipMsg"></p>
+        <div class="ship-bar__track"><div class="ship-bar__fill" id="shipFill" style="width:0%"></div></div>
+      </div>
+      <div class="drawer__total">
+        <span class="lbl">Subtotal</span>
+        <span class="amt" id="drawerTotal">€0</span>
+      </div>
+      <a href="cart.html" class="btn btn--red btn--block">Go to checkout</a>
+    </div>
+  </aside>
+
+  <!-- ================= SEARCH OVERLAY ================= -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-box">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Search kits, part numbers, models…" autocomplete="off" aria-label="Search parts">
+      </div>
+      <div class="search-hint">
+        <span>Try “kit”, “MND-AMB64” or “A6”</span>
+        <span><kbd>ESC</kbd> to close</span>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>
