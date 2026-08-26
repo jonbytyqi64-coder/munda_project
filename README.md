@@ -14,6 +14,8 @@ red accents and a signature red→white "spectrum" accent.
 | `shop.html` | Full catalogue with category / price / compatibility filters, sorting, URL state |
 | `product.html` | Product detail: gallery, specs, fitment chips, related products, add to cart |
 | `cart.html` | Cart review, promo codes, order summary, demo checkout (steps + confirmation) |
+| `game.html` | **MUNDA Lightweave** — a textile-light arcade game (endless runner): weave a thread of light through the lanes, catch light threads, dodge dark knots. Touch/keyboard, combo scoring, high score |
+| `interior.html` | **Interactive Audi interior experience** — boot sequence, live gauges, ambient lighting, headlights, rev, and an AI photoreal render of the cabin |
 
 ## Features
 
@@ -52,3 +54,4 @@ Design tokens (colors, type, radii, motion) are CSS variables at the top of `ass
   (or the `CATEGORIES` images) for real product shots; an automatic dark fallback shows if an image fails to load.
 - The checkout is a **demo** — no payment is processed and card details never leave the browser.
 - Original brand mark (SVG) — deliberately not an Audi badge.
+- `interior.html` bundles **no API key**: the AI chat and premium photoreal model stay inactive until you paste your own OpenRouter key into `interior.js` (`API_KEY`); the photoreal view automatically falls back to the free Pollinations render service, so it works out of the box.

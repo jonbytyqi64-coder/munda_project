@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>MUNDA Lightweave — a textile-light arcade game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game" tabindex="0" aria-label="MUNDA Lightweave game canvas"></canvas>
+
+    <div class="hud" id="hud" aria-hidden="true">
+      <div class="hud__box">SCORE <b id="score">0</b></div>
+      <div class="hud__combo" id="combo-wrap" hidden>×<b id="combo">1</b></div>
+      <div class="hud__box hud__box--right">BEST <b id="best">0</b></div>
+    </div>
+
+    <button class="mute" id="btn-mute" type="button" aria-label="Toggle sound">🔊</button>
+
+    <div class="overlay" id="overlay-start">
+      <svg class="logo" viewBox="0 0 220 40" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#6e8bff" />
+            <stop offset="0.5" stop-color="#bfe0ff" />
+            <stop offset="1" stop-color="#9b5cff" />
+          </linearGradient>
+        </defs>
+        <path d="M 8 24 Q 34 8 58 24 T 108 24 T 158 24 T 208 24" fill="none" stroke="url(#lg)" stroke-width="3.5" stroke-linecap="round" />
+      </svg>
+      <h1 class="title">MUNDA <span>LIGHTWEAVE</span></h1>
+      <p class="tagline">Light, woven into motion.</p>
+      <p class="flavor">
+        The textile-light technology that glows inside the Audi A3 — now as an arcade run.
+        Steer the thread of light, catch the woven threads, dodge the dark knots.
+      </p>
+      <button class="play" id="btn-start" type="button">▶ &nbsp;Play</button>
+      <p class="hint">← → &nbsp;·&nbsp; A D &nbsp;·&nbsp; tap / swipe</p>
+      <a class="back" href="index.html">← back to MUNDA</a>
+      <p class="fine">A fan-made concept inspired by MUNDA Textile Lichtsysteme (AUNDE × MENTOR).</p>
+    </div>
+
+    <div class="overlay" id="overlay-over" hidden>
+      <h2 class="over-title">Thread snapped</h2>
+      <p class="final">SCORE <b id="final-score">0</b></p>
+      <p class="final final--best" id="new-best" hidden>★ new best!</p>
+      <button class="play" id="btn-restart" type="button">↻ &nbsp;Weave again</button>
+      <p class="hint">Enter · Space · tap</p>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
