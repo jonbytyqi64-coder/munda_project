@@ -109,6 +109,23 @@
             <clipPath id="glassClip">
               <polygon points="90,95 1110,95 935,360 265,360" />
             </clipPath>
+            <linearGradient id="seatShade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.10" />
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="dashShadow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#000000" stop-opacity="0.45" />
+              <stop offset="1" stop-color="#000000" stop-opacity="0" />
+            </linearGradient>
+            <radialGradient id="wheelGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#7fb4ff" stop-opacity="0.18" />
+              <stop offset="0.6" stop-color="#7fb4ff" stop-opacity="0.05" />
+              <stop offset="1" stop-color="#7fb4ff" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="horizonGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ffd98a" stop-opacity="0.35" />
+              <stop offset="1" stop-color="#ffd98a" stop-opacity="0" />
+            </radialGradient>
           </defs>
 
           <!-- cabin base -->
@@ -149,6 +166,7 @@
               <rect x="570" y="334" width="3" height="3" opacity="0.5" />
               <rect x="838" y="330" width="3" height="3" opacity="0.45" />
             </g>
+            <ellipse cx="600" cy="338" rx="320" ry="26" fill="url(#horizonGlow)" />
             <polygon points="265,360 935,360 1045,675 155,675" fill="#0d1118" />
             <path d="M 285 360 L 185 675" stroke="#5c6b7d" stroke-width="4" opacity="0.55" fill="none" />
             <path d="M 915 360 L 1015 675" stroke="#5c6b7d" stroke-width="4" opacity="0.55" fill="none" />
@@ -186,6 +204,7 @@
 
           <!-- dashboard -->
           <rect x="0" y="360" width="1200" height="16" fill="url(#cowlGrad)" />
+          <rect x="80" y="370" width="1040" height="2" fill="#ffffff" opacity="0.06" />
           <rect x="30" y="362" width="1140" height="5" rx="2.5" fill="#06080b" opacity="0.85" />
           <rect x="0" y="376" width="1200" height="184" fill="url(#dashGrad)" />
           <rect x="0" y="520" width="1200" height="2" fill="#000000" opacity="0.25" />
@@ -240,6 +259,9 @@
               <circle cx="340" cy="410" r="4.5" fill="#0c0e13" stroke="#e8ecf2" stroke-width="1.5" />
             </g>
           </g>
+
+          <!-- hood shadow on the cluster screen -->
+          <rect x="60" y="352" width="380" height="12" fill="url(#dashShadow)" opacity="0.5" />
 
           <!-- MMI screen -->
           <rect x="520" y="345" width="280" height="150" rx="8" fill="url(#screenGrad)" stroke="#000000" stroke-opacity="0.6" />
@@ -298,14 +320,19 @@
           <path class="ambient-glow" d="M 1178 600 L 1178 660" fill="none" stroke-width="5" />
           <path class="ambient" d="M 1178 600 L 1178 660" fill="none" stroke-width="2" />
 
+          <!-- depth shadow where the dash meets the lower panels -->
+          <rect x="0" y="540" width="1200" height="46" fill="url(#dashShadow)" opacity="0.35" />
+
           <!-- seats -->
           <path d="M 0 170 Q 60 168 88 178 L 118 196 L 150 560 L 0 560 Z" fill="#0f1217" />
           <path d="M 0 170 Q 60 168 88 178" fill="none" stroke="#1c212b" stroke-width="2" />
           <rect x="6" y="128" width="74" height="58" rx="20" fill="#0f1217" />
+          <rect x="14" y="134" width="40" height="28" rx="14" fill="url(#seatShade)" />
           <path d="M 1200 220 Q 1140 216 1112 226 L 1082 244 L 1050 560 L 1200 560 Z" fill="#101318" />
           <path d="M 1200 220 Q 1140 216 1112 226 L 1082 244 L 1050 560 L 1200 560 Z" fill="url(#quilt)" />
           <path d="M 1200 220 Q 1140 216 1112 226" fill="none" stroke="#232a36" stroke-width="2" />
           <rect x="1096" y="172" width="74" height="58" rx="20" fill="#101318" />
+          <rect x="1104" y="178" width="40" height="28" rx="14" fill="url(#seatShade)" />
           <rect x="1040" y="560" width="160" height="70" rx="14" fill="#0e1116" />
           <rect x="1040" y="560" width="160" height="70" rx="14" fill="url(#quilt)" />
 
@@ -326,6 +353,9 @@
               <circle cx="326.4" cy="540" r="9.4" />
             </g>
           </g>
+
+          <!-- instrument-screen light spilling onto the wheel -->
+          <circle cx="300" cy="540" r="175" fill="url(#wheelGlow)" />
         </svg>
         </div>
 

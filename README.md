@@ -15,7 +15,7 @@ red accents and a signature red→white "spectrum" accent.
 | `product.html` | Product detail: gallery, specs, fitment chips, related products, add to cart |
 | `cart.html` | Cart review, promo codes, order summary, demo checkout (steps + confirmation) |
 | `game.html` | **MUNDA Lightweave** — a textile-light arcade game (endless runner): weave a thread of light through the lanes, catch light threads, dodge dark knots. Touch/keyboard, combo scoring, high score |
-| `interior.html` | **Interactive Audi interior experience** — boot sequence, live gauges, ambient lighting, headlights, rev, and an AI photoreal render of the cabin |
+| `interior.html` | **Interactive Audi interior experience** — boot sequence, live gauges, ambient lighting, headlights, rev, plus a bundled photoreal render of the cabin (with AI re-roll on demand) |
 
 ## Features
 

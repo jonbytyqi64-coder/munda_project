@@ -316,6 +316,8 @@
     try { sessionStorage.removeItem("audi-photo-failed"); } catch (e) { /* ignore */ }
     if (source === "pollinations") {
       setStatus("Photoreal render ready — free render service (no credits needed). Add OpenRouter credits to unlock the premium model.", "done");
+    } else if (source === "bundled") {
+      setStatus("Photoreal render ready — bundled Audi interior render. Hit \u201cGenerate render\u201d for a fresh AI re-roll.", "done");
     } else {
       setStatus("Photoreal render ready — generated with your OpenRouter key (cached in this browser).", "done");
     }
@@ -367,11 +369,11 @@
     setStatus("Generating photorealistic Audi interior… (one-time, budget-friendly model)", "busy");
 
     var prompt = [
-      "Photorealistic interior of a modern Audi car, photographed from the driver's seat at night.",
-      "Virtual Cockpit digital instrument cluster with glowing dials, flat-bottom leather steering wheel with the four-ring logo,",
-      "large MMI touchscreen, elegant ambient LED light strips glowing soft ice-blue along the dashboard and doors,",
-      "quilted leather sport seats, carbon-fiber and brushed-aluminum trim, soft reflections on glossy surfaces,",
-      "shallow depth of field, cinematic automotive photography, ultra-detailed, 8k, no people"
+      "Photorealistic interior of a modern Audi A3 (2024), photographed from the driver's seat at night.",
+      "MUNDA textile ambient lighting woven into the door panels, glowing soft ice-blue fabric light,",
+      "Audi Virtual Cockpit instrument cluster with glowing dials, flat-bottom leather steering wheel with the four-ring logo,",
+      "large MMI touchscreen, quilted leather sport seats, carbon-fiber and brushed-aluminum trim,",
+      "soft reflections on glossy surfaces, cinematic automotive photography, shallow depth of field, ultra-detailed, 8k, no people"
     ].join(" ");
 
     if (!key) {
@@ -483,15 +485,11 @@
     });
   });
 
-  // warm the cache once: use a stored render if we have one, otherwise generate it
+  // show the bundled photoreal render immediately; "Generate render" re-rolls via AI
   var cached = cacheGet();
   if (cached) {
     showPhoto(cached);
   } else {
-    setTimeout(function () {
-      if (!busy && !photoUrl) {
-        generate();
-      }
-    }, 1500);
+    showPhoto("assets/img/audi_interior_photoreal.jpg", "bundled");
   }
 })();
