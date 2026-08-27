@@ -52,6 +52,8 @@ Design tokens (colors, type, radii, motion) are CSS variables at the top of `ass
 
 - Product photography uses stock car/interior images as placeholders — swap the `img` field of each product
   (or the `CATEGORIES` images) for real product shots; an automatic dark fallback shows if an image fails to load.
+  Current placeholders are real Audi photos (interiors + exteriors), sourced from Wikimedia Commons/Flickr via
+  Openverse under CC licenses — see `assets/img/audi/CREDITS.md` for per-photo attribution.
 - The checkout is a **demo** — no payment is processed and card details never leave the browser.
 - Original brand mark (SVG) — deliberately not an Audi badge.
 - `interior.html` bundles **no API key**: the AI chat and premium photoreal model stay inactive until you paste your own OpenRouter key into `interior.js` (`API_KEY`); the photoreal view automatically falls back to the free Pollinations render service, so it works out of the box.

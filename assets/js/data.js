@@ -15,11 +15,11 @@ const SITE = {
 };
 
 const CATEGORIES = [
-  { slug: "kits",        name: "Ambient Light Kits",      blurb: "Complete interior conversions",        img: "assets/img/audiii.webp" },
-  { slug: "interior",    name: "Interior Lighting",        blurb: "Bars, strips and footwell light",      img: "assets/img/audi_interior_photoreal.jpg" },
-  { slug: "exterior",    name: "Logo & Exterior Light",    blurb: "Puddle beams and grille accents",      img: "assets/img/audi_dashboard_night.jpg" },
-  { slug: "controllers", name: "Controllers & Modules",    blurb: "App, gesture and voice control",       img: "assets/img/audi_door_textile_light.jpg" },
-  { slug: "custom",      name: "Factory & OEM Services",   blurb: "Custom calibration, B2B supply",       img: "assets/img/audiii.webp" },
+  { slug: "kits",        name: "Ambient Light Kits",      blurb: "Complete interior conversions",        img: "assets/img/audi/audi_02_Audi_interior.jpg" },
+  { slug: "interior",    name: "Interior Lighting",        blurb: "Bars, strips and footwell light",      img: "assets/img/audi/audi_01_2020_Audi_RS_Q8_Interior.jpg" },
+  { slug: "exterior",    name: "Logo & Exterior Light",    blurb: "Puddle beams and grille accents",      img: "assets/img/audi/ext_01_Audi_RS6.jpg" },
+  { slug: "controllers", name: "Controllers & Modules",    blurb: "App, gesture and voice control",       img: "assets/img/audi/audi_33_Audi_cockpit_at_CES_2014_2.jpg" },
+  { slug: "custom",      name: "Factory & OEM Services",   blurb: "Custom calibration, B2B supply",       img: "assets/img/audi/audi_02_AUDI_A6L_C9_INTERIOR_2.jpg" },
 ];
 
 const MODELS = [
@@ -44,7 +44,7 @@ const PRODUCTS = [
   {
     id: "amb-001", category: "kits", name: "Full Interior Ambient Kit — 64 Colors",
     partNo: "MND-AMB64", price: 649, oldPrice: 749, rating: 4.9, reviews: 231,
-    badge: "Bestseller", img: "assets/img/audi_interior_photoreal.jpg",
+    badge: "Bestseller", img: "assets/img/audi/audi_10_Audi_interior_4274881113.jpg",
     compat: ["A4 (B9)", "A5 (F5)", "A6 (C8)", "A7 (4K)", "Q5 (FY)"],
     desc: "Our flagship 64-color conversion: dashboard light bar, four door strips, footwells and cupholders — 26 light zones on OEM-grade fiber optics. Colors are calibrated on the bench to match the MMI palette exactly.",
     specs: { "Colors": "64, factory color-calibrated", "Light zones": "26 (bar + doors + footwells + cupholders)", "Technology": "Side-glow fiber optics, CNC-milled guides", "Control": "App, MMI-integrated or gesture", "Install": "Plug & play — OEM harness, no splicing", "Warranty": "2 years / unlimited km" }
@@ -52,7 +52,7 @@ const PRODUCTS = [
   {
     id: "amb-002", category: "kits", name: "Pro Series Kit — 32 Light Zones",
     partNo: "MND-PRO32", price: 899, rating: 5.0, reviews: 118,
-    badge: "New", img: "assets/img/audi_dashboard_night.jpg",
+    badge: "New", img: "assets/img/audi/audi_35_Audi_A1_clubsport_quattro_dashboard_and_steering_wheel_.jpg",
     compat: ["A6 (C8)", "A7 (4K)", "A8 (D5)", "Q7 (4M)", "Q8 (4M)"],
     desc: "The full 32-zone Pro conversion for the C8 / 4K / 4M platforms — every surface, including the speaker rings and dashboard contour, lit with true RGB and per-zone animation. Our most installed kit in workshops.",
     specs: { "Colors": "16.7M RGB (true color)", "Light zones": "32 individually addressable", "Extras": "Speaker rings, contour lines", "Control": "Pro app with per-zone scenes", "Install": "OEM harness, CAN-integrated dimming", "Warranty": "3 years (Pro program)" }
@@ -60,7 +60,7 @@ const PRODUCTS = [
   {
     id: "amb-003", category: "kits", name: "e-tron Style Light Package",
     partNo: "MND-ETRN", price: 549, rating: 4.8, reviews: 87,
-    badge: "", img: "assets/img/audi_door_textile_light.jpg",
+    badge: "", img: "assets/img/audi/ext_38_Audi_Quattro.jpg",
     compat: ["e-tron GT", "Q8 e-tron"],
     desc: "The e-tron GT signature look — layered light with soft color transitions and a pulsing welcome sequence. Designed for the electric platforms and their digital cockpit layouts.",
     specs: { "Colors": "64, e-tron signature presets", "Light zones": "18", "Sequence": "Pulsing welcome animation", "Control": "App + cockpit display sync", "Install": "Plug & play, e-tron harness", "Warranty": "2 years" }
@@ -68,7 +68,7 @@ const PRODUCTS = [
   {
     id: "int-001", category: "interior", name: "Dashboard Light Bar — Fiber Optic",
     partNo: "MND-DLB01", price: 199, rating: 4.8, reviews: 302,
-    badge: "", img: "assets/img/audiii.webp",
+    badge: "", img: "assets/img/audi/audi_03_Red_Audi_Interior.jpg",
     compat: ["A4 (B9)", "A5 (F5)", "A6 (C8)", "A7 (4K)"],
     desc: "The signature MUNDA dashboard bar: a single CNC-milled fiber-optic guide running the full width of the dash. Edge-lit, hotspot-free and invisible when off.",
     specs: { "Length": "Custom-cut per model (up to 1,600 mm)", "Light source": "RGB LED, 120 lm", "Guide": "3 mm side-glow fiber, polished ends", "Diffusion": "Uniform, no hotspots", "Control": "App or dimmer wheel", "Warranty": "2 years" }
@@ -76,7 +76,7 @@ const PRODUCTS = [
   {
     id: "int-002", category: "interior", name: "Door Panel Light Strips (Set of 4)",
     partNo: "MND-DSL04", price: 149, rating: 4.7, reviews: 268,
-    badge: "", img: "assets/img/audi_interior_photoreal.jpg",
+    badge: "", img: "assets/img/audi/audi_13_2011_Audi_A1_Sport_NRMA_Drivers_Seat.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A5 (F5)", "Q3 (F3)", "Q5 (FY)", "TT (8S)"],
     desc: "Pre-formed aluminum-channel strips for all four doors, with the OEM contour copied to 0.1 mm. Adhesive-backed with a factory-style connector — fitted in about an hour.",
     specs: { "Set": "4 doors", "Profile": "Brushed aluminum channel", "Fit": "OEM contour, 0.1 mm tolerance", "Connector": "Factory-style, polarity-safe", "Control": "Syncs with kit controller", "Warranty": "2 years" }
@@ -84,7 +84,7 @@ const PRODUCTS = [
   {
     id: "int-003", category: "interior", name: "RGB Footwell Light Set",
     partNo: "MND-FWL03", price: 89, rating: 4.6, reviews: 411,
-    badge: "", img: "assets/img/audi_dashboard_night.jpg",
+    badge: "", img: "assets/img/audi/audi_11_Audi_R8_interior.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A6 (C8)", "Q5 (FY)", "TT (8S)"],
     desc: "Four under-dash RGB modules with diffused lenses. The fastest interior upgrade we make — ten minutes, no trim removal, factory dimming behavior.",
     specs: { "Modules": "4 (driver, passenger, rear x2)", "Brightness": "Dimmable, CAN-synced", "Mount": "Magnetic + adhesive", "Power": "From light switch circuit", "Control": "App or existing dimmer", "Warranty": "2 years" }
@@ -92,7 +92,7 @@ const PRODUCTS = [
   {
     id: "int-004", category: "interior", name: "Starlight Headliner Kit",
     partNo: "MND-STL01", price: 499, rating: 4.9, reviews: 64,
-    badge: "New", img: "assets/img/audi_door_textile_light.jpg",
+    badge: "New", img: "assets/img/audi/audi_24_2008_Audi_RS6.jpg",
     compat: ["A4 (B9)", "A5 (F5)", "A6 (C8)", "A8 (D5)", "Q7 (4M)"],
     desc: "400 hand-placed optical fibers in the headliner with a dedicated twinkle module. Built in our upholstery shop on your exchanged headliner — a true factory-grade conversion.",
     specs: { "Fibers": "400 optical points", "Module": "Twinkle + static modes", "Work": "On exchanged headliner (send-in)", "Turnaround": "5 working days", "Finish": "Original fabric retained", "Warranty": "2 years" }
@@ -100,7 +100,7 @@ const PRODUCTS = [
   {
     id: "ext-001", category: "exterior", name: "Logo Beam Puddle Lights (Set of 4)",
     partNo: "MND-LGB04", price: 129, rating: 4.8, reviews: 354,
-    badge: "Bestseller", img: "assets/img/audiii.webp",
+    badge: "Bestseller", img: "assets/img/audi/ext_60_Audi_s_e_tron_concept_car.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A5 (F5)", "A6 (C8)", "Q3 (F3)", "Q5 (FY)", "Q7 (4M)", "TT (8S)"],
     desc: "Crisp LED logo beams for all four doors, projecting the MUNDA hex mark in 6,500 K white. Factory-fitted housings with an anti-flicker driver — no error codes, ever.",
     specs: { "Set": "4 doors", "Projection": "MUNDA hex mark, 6,500 K", "Housing": "OEM-fit, sealed IP67", "Driver": "Anti-flicker, CAN-safe", "Install": "Direct swap of door lights", "Warranty": "2 years" }
@@ -108,7 +108,7 @@ const PRODUCTS = [
   {
     id: "ext-002", category: "exterior", name: "Front Grille Illumination Strip",
     partNo: "MND-GRL01", price: 179, rating: 4.7, reviews: 142,
-    badge: "", img: "assets/img/audi_interior_photoreal.jpg",
+    badge: "", img: "assets/img/audi/audi_34_2026_Audi_Q9_dashboard_Autowizja.jpg",
     compat: ["A4 (B9)", "A5 (F5)", "A6 (C8)", "Q5 (FY)"],
     desc: "A subtle light line following the grille contour — white in motion, dimmed at standstill. CNC-formed acrylic lens, IP67, tapped into the DRL circuit.",
     specs: { "Lens": "CNC-formed acrylic, UV-stable", "Color": "6,500 K white (dimmed at standstill)", "Rating": "IP67", "Wiring": "DRL circuit, relay included", "Install": "Adhesive + bracket, ~40 min", "Warranty": "2 years" }
@@ -116,7 +116,7 @@ const PRODUCTS = [
   {
     id: "ext-003", category: "exterior", name: "Dynamic Welcome Light Sequence",
     partNo: "MND-WLC01", price: 99, rating: 4.6, reviews: 97,
-    badge: "", img: "assets/img/audi_dashboard_night.jpg",
+    badge: "", img: "assets/img/audi/audi_41_2023_Audi_A4_B9_Avant_Allroad_left_side_steering_wheel_.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A5 (F5)", "Q3 (F3)"],
     desc: "A sweep animation across the dash bar and door strips when you unlock — configurable direction and speed. Works with any MUNDA kit controller.",
     specs: { "Animation": "Sweep left / right / both", "Speed": "3 steps", "Trigger": "Unlock + door open", "Compatibility": "All MUNDA controllers", "Update": "Via app firmware", "Warranty": "2 years" }
@@ -124,7 +124,7 @@ const PRODUCTS = [
   {
     id: "ctl-001", category: "controllers", name: "Smart RGB Controller — App & Voice",
     partNo: "MND-CTL64", price: 149, rating: 4.9, reviews: 198,
-    badge: "Bestseller", img: "assets/img/audi_door_textile_light.jpg",
+    badge: "Bestseller", img: "assets/img/audi/audi_36_Audi_A4_B7_Cabriolet_Dashboard.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A5 (F5)", "A6 (C8)", "Q5 (FY)", "TT (8S)"],
     desc: "The brain of every MUNDA kit: 64-color control, 26-zone mapping, scenes and schedules in the app — plus Alexa and Google Home voice commands from the driver's seat.",
     specs: { "Zones": "Up to 32", "Wireless": "Bluetooth 5.3 + Wi-Fi", "Voice": "Alexa / Google Assistant", "Power": "CAN-safe, fused", "Size": "Fits behind glovebox", "Warranty": "2 years" }
@@ -132,7 +132,7 @@ const PRODUCTS = [
   {
     id: "ctl-002", category: "controllers", name: "Gesture Control Module",
     partNo: "MND-GST01", price: 89, rating: 4.7, reviews: 76,
-    badge: "New", img: "assets/img/audiii.webp",
+    badge: "New", img: "assets/img/audi/ext_35_Audi_TT_MK2_8J_R8_Style_Full_body_kit_Front_bumper.jpg",
     compat: ["A4 (B9)", "A5 (F5)", "A6 (C8)", "A7 (4K)"],
     desc: "Wave to switch scenes, swipe to dim. An infrared sensor mounted under the dash reads hand gestures with zero distraction — no reaching, no menus.",
     specs: { "Sensor": "IR proximity, 30 cm range", "Gestures": "Wave, swipe, hold", "Mount": "Under-dash, adhesive", "Integration": "Any MUNDA controller", "Power": "5 V from controller", "Warranty": "2 years" }
@@ -140,7 +140,7 @@ const PRODUCTS = [
   {
     id: "ctl-003", category: "controllers", name: "OEM Plug & Play Harness",
     partNo: "MND-HRN01", price: 59, rating: 4.8, reviews: 512,
-    badge: "", img: "assets/img/audi_interior_photoreal.jpg",
+    badge: "", img: "assets/img/audi/audi_39_2021_Audi_e_tron_GT_RS_steering_wheel_2.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A5 (F5)", "A6 (C8)", "Q3 (F3)", "Q5 (FY)", "TT (8S)"],
     desc: "Model-specific looms with factory connectors and CAN taps — the reason our kits install without a single splice. Sold separately or bundled with every kit.",
     specs: { "Type": "Model-specific, pre-terminated", "Connectors": "Factory-grade, polarity-safe", "CAN": "T-tap included", "Length": "Custom per model", "Coverage": "All MUNDA kits", "Warranty": "2 years" }
@@ -148,7 +148,7 @@ const PRODUCTS = [
   {
     id: "oem-001", category: "custom", name: "Custom Color Calibration",
     partNo: "MND-CAL01", price: 149, rating: 5.0, reviews: 43,
-    badge: "New", img: "assets/img/audi_dashboard_night.jpg",
+    badge: "New", img: "assets/img/audi/audi_37_Audi_Cabriolet_dashboard.jpg",
     compat: ["A3 (8V)", "A4 (B9)", "A5 (F5)", "A6 (C8)", "Q5 (FY)", "TT (8S)"],
     desc: "Send us a paint code or a hex value and our light lab matches it on the bench — 3 working days, delivered as a firmware profile for your MUNDA controller. Factory service, done properly.",
     specs: { "Service": "Bench-matched color profile", "Turnaround": "3 working days", "Delivery": "Firmware profile + app preset", "Scope": "Any RGB value / paint code", "Re-runs": "Free within 12 months", "Warranty": "n/a — service" }
@@ -156,7 +156,7 @@ const PRODUCTS = [
   {
     id: "oem-002", category: "custom", name: "OEM Supply Program — Sample Kit",
     partNo: "MND-OEM01", price: 2499, rating: 4.9, reviews: 21,
-    badge: "B2B", img: "assets/img/audi_door_textile_light.jpg",
+    badge: "B2B", img: "assets/img/audi/ext_26_Audi_TT_Rieger_Tuning.jpg",
     compat: ["A4 (B9)", "A5 (F5)", "A6 (C8)", "Q5 (FY)"],
     desc: "For workshops and distributors: a full evaluation kit with trade pricing, white-label packaging options and direct factory support. Volume pricing from 10 kits, drop-shipping available.",
     specs: { "Includes": "1× Pro kit + demo controller", "Trade pricing": "From 10 units", "Packaging": "White-label option", "Support": "Direct factory line", "Shipping": "Pallet or drop-ship", "Payment": "Net 30 for accounts" }
